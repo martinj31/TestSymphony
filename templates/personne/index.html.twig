@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PersonneController!{% endblock %}
+
+{% block body %}
+
+
+
+{{ form(form_Personne) }}
+
+
+
+{% for persone in allPersonne  %}
+
+<p>{{ persone.nom }}</p>
+<p>{{ persone.prenom }}</p>
+<p>{{ persone.dateNaissance|date("m/d/Y", false) }}</p>
+
+----------------------------------------------
+{% endfor %}
+
+
+
+
+
+{% endblock %}
